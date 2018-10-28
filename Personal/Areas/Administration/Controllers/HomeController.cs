@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Personal.Models;
 
-namespace Personal.Controllers
+namespace Personal.Administration.Controllers
 {
    
-    [AllowAnonymous]
+    [Area("Administration")]
+    [Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()
